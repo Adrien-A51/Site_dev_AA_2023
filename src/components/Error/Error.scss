@@ -1,0 +1,36 @@
+.Err404{
+    margin-bottom: 100px;
+    text-align: center;
+    color: #FF6060;
+    font-family: 'Montserrat';
+    h1{
+    font-size: 288px;
+    margin-bottom: 0;
+    margin-top: 0;
+    }
+    p{
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 100px;
+    }
+            a{
+                color: #FF6060;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            }
+}
+
+/* format mobile min 500px */
+@media screen and (max-width: 600px) {
+    .Err404{
+        margin-top: 200px;
+        margin-bottom: 200px;
+        h1{
+            font-size: 96px;
+        }
+        p{
+            font-size: 25px;
+        }
+    }
+}
