@@ -1,0 +1,14 @@
+@mixin Font {
+    font-family: 'Rufina';
+    color: #2952A0;
+}
+
+.container{
+    margin: 0 100px 40px 100px;  
+}
+
+
+/* format mobile min 500px */
+@media screen and (max-width: 600px) {
+   
+}

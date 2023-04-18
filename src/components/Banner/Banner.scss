@@ -3,22 +3,28 @@
     display: flex;
     justify-content: space-between;
     margin: 40px 100px 40px 100px;
-    font-family: 'Montserrat';
+    font-family: 'Rufina';
     font-size: 24px;
+    img{
+        width: 400px;
+    }
+}
+.menu nav{
+    ul{
+        display: flex;
+        gap: 70px;
+        list-style: none;
+    }
+    li a{
+        color: #2952A0;
+        text-decoration: none;
+        &:hover{
+            color: #BDBCBC;
+            text-decoration: underline;
+    }
+    }
 }
 
-nav ul{
-    display: flex;
-    gap: 70px;
-    list-style: none;
-li a{
-    color: #FF6060;
-    text-decoration: none;
-    &:hover{
-        text-decoration: underline;
-    }
-    }
-}
 
 /* format mobile min 500px */
 @media screen and (max-width: 600px) {
