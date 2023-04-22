@@ -1,17 +1,9 @@
-@mixin fond_rouge{
-    background-color: #FF6060;
-}
-
-@mixin Text{
-    font-family: 'Montserrat';
-    font-weight: 500;
-    font-size: 24px;
-}
+@import '../main.scss';
 
 .head{
     margin: 0 100px 40px 100px;
     border-radius: 25px;
-    background-image: url(images/img-Ap.png);
+    background-image: url(../../pages/Apropos/images/img-Ap.png);
     background-size: cover;
     filter: brightness(85%);
     background-position: center;
@@ -21,13 +13,15 @@
 .dropdown{
     width: 1023px;
     height: 47px; 
-    @include fond_rouge();
+    background-color: #FF6060;
     color: white;
     margin: auto;
     border-radius: 5px;
     margin-bottom: 20px;
     p{
-        @include Text; 
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 24px;
         margin: 0;
         padding: 10px;
     }
@@ -41,7 +35,7 @@
 }
 
 .ant-collapse-item{
-    @include fond_rouge();
+    background-color: #FF6060;
     width: 1023px;
     color: white;
     margin: auto;
@@ -50,7 +44,9 @@
 }
 
 .ant-collapse-header-text{
-    @include Text();
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 24px;
     color: white;
 }
 

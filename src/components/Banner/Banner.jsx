@@ -1,31 +1,16 @@
-import { Link } from 'react-router-dom'
-import './Banner.scss'
-import logo from './images/logo-aa.png'
+import { NavLink } from 'react-router-dom'
+import '../../Sass/components/_Banner.scss'
+import logo from './images/logo-aa-info-texte.png'
 
-function Header() {
-  return (
-<>
+export default function Header() {
+  return (<>
     <div className='header'>
-    <Link to="/"><img src={logo} alt='Logo Kasa'/></Link>
-    <div className='menu'>
+    <NavLink to="/"><img src={logo} alt='Logo Aa'/></NavLink>
       <nav>
-        <ul>
-          <li>
-            <Link to="/">Accueil</Link>
-          </li>
-          <li>
-            <Link to="/Apropos">A propos</Link>
-          </li>
-          <li>
-            <Link to="/Contact">Contact</Link>
-          </li>
-        </ul>
+        <NavLink to="/">Accueil</NavLink>
+        <NavLink to="/Apropos">A propos</NavLink>
+        <NavLink to="/Contact">Contact</NavLink>
       </nav>
-      </div>
     </div>
-    </>
-  )
+    </>)
 }
-
-export default Header; 
-
