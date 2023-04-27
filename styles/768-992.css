@@ -1,0 +1,32 @@
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .intro {
+    width: auto;
+  }
+  .etapes {
+    width: 80%;
+  }
+  .restos-case {
+    display: flex;
+  }
+  .coeur {
+    left: 85%;
+    bottom: 60px;
+  }
+  .restos-case {
+    display: flex;
+    gap: 40px;
+  }
+  .nouveau {
+    left: 72%;
+    top: 5%;
+  }
+  .restos-texte {
+    top: 80%;
+  }
+}
+a {
+  width: 100%;
+}
+
+/*@media screen and (min-width:768px)*/
+/*# sourceMappingURL=768-992.css.map *//*# sourceMappingURL=768-992.css.map */
