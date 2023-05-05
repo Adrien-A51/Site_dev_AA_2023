@@ -1,0 +1,38 @@
+.footer {
+    background-color: #2952A0;
+    height: 155px;
+    padding-top: 20px;
+    img {
+    width: 80px;
+    }
+    p {
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 15px;
+    font-family: "Rufina";
+    font-size: 20px;
+    line-height: 60px;
+    margin: 0;
+    }
+    nav {
+    list-style: none;
+    text-align: center;
+    }
+    nav a {
+    color: white;
+    text-decoration: none;
+    width: 100px;
+    padding: 25px;
+    font-size: 18px;
+        &:hover {
+        border-bottom: solid 2px #d3d3d3;
+        color: #d3d3d3;
+        }
+        .active {
+        border-bottom: solid 2px #d3d3d3;
+        }
+}
+}

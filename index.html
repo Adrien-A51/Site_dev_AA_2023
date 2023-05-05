@@ -3,51 +3,155 @@
 <head>
 	<meta charset="utf-8">
 
-    <!--font Shrikhand-->
+    <!--font Rufina -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-
-    <!--font Roboto-->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap" rel="stylesheet">
 
     <!--fontawesome-->
     <script src="https://kit.fontawesome.com/6d160e6da3.js" crossorigin="anonymous"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<!--styles.css-->
+	  <!--styles.css-->
     <link rel="stylesheet" href="styles/styles.css" type="text/css">
 
-    	<!--768-992.css-->
-	<link rel="stylesheet" href="styles/768-992.css" type="text/css">
+    <!-- 1. anim.scss -->
+    <link rel="stylesheet" href="styles/anim/anim.css" type="text/css">
 
-        <!--992-1199.css-->
-	<link rel="stylesheet" href="styles/992-1199.css" type="text/css">
+    <!-- 2. header.scss -->
+    <link rel="stylesheet" href="styles/header/header.css" type="text/css">
 
-	<title>Accueil</title>
+    <!-- . footer.scss -->
+    <link rel="stylesheet" href="styles/footer/footer.css" type="text/css">
+
+    <!--script-->
+    <script src="script.js" defer></script>
+
+    <!--jquery-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	  <title>Accueil</title>
 </head>
 <body>
 
-<!-- 1. Animation du chargement -->
+<!-- loader -->
     <!--
-    <div class="chargement">
-    <div class="loader"></div>
-    </div>
+    <div class="chargement"><div class="loader"></div></div>
     -->
-    <div class="header">
-        <img src="images/header/logo-aa-infographiste.png" alt='Logo_AA'/>
-          <nav>
-            <a href="#">Accueil</a>
-            <a href="#">A propos</a>
-          </nav>
+
+<!-- btn scrollTop -->
+    <div id="stop" class="scrollTop"><span><a href=""><i class="fa-solid fa-chevron-up"></i></a></span></div>
+
+<!-- btn scrollDown -->
+    <a class="arrow-wrap" href="#content">
+      <i class="fa-solid fa-chevron-down fa-beat" style="--fa-animation-duration: 3s;"></i>
+    </a>
+      
+<!-- Header -->
+<div class="header">
+    <img href="index.html" src="images/header/logo-aa-infographiste.png" alt='Logo_AA'/>
+    <nav>
+        <a href="#">Accueil</a>
+        <a href="#">Présentation</a>
+        <a href="#">Réalisations</a>
+        <a href="#">Contact</a>
+    </nav>
+</div>
+
+
+
+
+<div class="present"></div>
+
+  <div class="content" id="content">
+
+    <div class="main2">
+      <div class="hero-left">
+        <h1>Equip TP service</h1>
+        <div class="layers">
+          <div class="layer layer-displayed" data-scene="1">
+            <span>Logo</span>
+            <div class="layer__image" style="background-image: url(./images/projet/1_logo_EQUIP_TP.png)"></div>
+            <div class="layer__info">
+              <div>
+                  <p>Adobe indesign</p>
+                  <p>Adobe illustrator</p>
+              </div>
+            </div>
+          </div>
+          <div class="layer" data-scene="2">
+            <span>Carte de visite</span>
+            <div class="layer__image" style="background-image: url(./images/projet/2_cdv_Romain_A.png)"></div>
+            <div class="layer__info">
+              <div>
+                  <p>Adobe indesign</p>
+                  <p>Adobe illustrator</p>
+              </div>
+            </div>
+          </div>
+          <div class="layer" data-scene="3">
+            <span>Site web à venir...</span>
+            <div class="layer__image" style="background-image: url('http://pngimg.com/uploads/snowboard/snowboard_PNG7998.png')"></div>
+            <div class="layer__info">
+              <div>
+                  <p>Visual Studio Code</p>
+                  <p>Github</p>
+              </div>
+            </div>
+          </div>
         </div>
+        <button onclick="switchLayer(2)"><</button>
+        <button onclick="switchLayer()">></button>
+      </div>
+  
+      
+      <div class="hero-right">
+        <div class="layer layer-displayed" data-scene="1"></div>
+        <div class="layer" data-scene="2"></div>
+        <div class="layer" data-scene="3"></div>
+        <div class="photo-frame">
+          <div class="layer layer-displayed" style="background-image: url(./images/projet/1_mock_up_1.png)" data-scene="1"></div>
+          <div class="layer" style="background-image: url(./images/projet/2_mock_up_1.png)" data-scene="2"></div>
+          <div class="layer" style="background-image: url('https://images.unsplash.com/photo-1512821062947-6eda5253c3e2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=305dedf0e09581de0ee68ab2c9523955&auto=format&fit=crop&w=1351&q=80')" data-scene="3"></div>
+          <div class="cover"></div>
+        </div>
+        <div class="photo-name">
+          <div class="photo-name__wrapper">
+            <div class="layer layer-displayed" data-scene="1">
+              <span class="photo-name__title">EQUIP TP service</span>
+              <span>Logo</span>
+            </div>
+            <div class="layer" data-scene="2">
+              <span class="photo-name__title">EQUIP TP service</span>
+              <span>Carte de visites</span>
+            </div>
+            <div class="layer" data-scene="3 ">
+              <span class="photo-name__title">EQUIP TP service</span>
+              <span>Site web</span>
+            </div>
+          </div>
+        </div>
+        <div class="photo-frame">
+          <div class="layer layer-displayed" style="background-image: url(./images/projet/1_mock_up_2.png)" data-scene="1"></div>
+          <div class="layer" style="background-image: url(./images/projet/2_mock_up_2.png)" data-scene="2"></div>
+          <div class="layer" style="background-image: url('https://images.unsplash.com/photo-1478700485868-972b69dc3fc4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=918195bdc5a37a2f412cf49234183427&auto=format&fit=crop&w=1350&q=80')" data-scene="3"></div>
+          <div class="cover"></div>
+        </div>
+      </div>
+  </div>
+  </div>
 
+<!-- . Footer -->
 
-<!-- 4. Footer et contact par mail ; css ligne 464 a 487 -->
-
-
+<div class='footer'>
+    <p><img src="images/footer/logo-aa-infographiste2.png" alt='Logo_AA'/>
+        Adrien Abdalalim - Développeur Web & React</p>
+        <nav>
+            <a href="#">Accueil</a>
+            <a href="#">Réalisations</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
 
 </body>
 </html>
