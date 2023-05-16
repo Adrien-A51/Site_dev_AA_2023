@@ -12,24 +12,27 @@ body {
 }
 
 
-/* 2. Header */
+/* Header */
   .header {
     align-items: center;
     display: flex;
-    background-color: lightgrey;
+    background-color: #2952A0;
     justify-content: space-between;
-    padding: 10px 100px 10px 100px;
-    height: 55px;
-    font-family: "Rufina";
+    width: 100%;
+    font-family: "Work Sans";
     font-size: 18px;
     img {
     width: 200px;
+    padding-left: 25px;
     }
-    a {
+    nav{
+      padding-right: 25px;
+    }
+    nav a {
     position: relative;
     padding: 1rem 0 0.5rem;
     margin: 0 1.5rem;
-    color: #2952A0;
+    color: #909090;
     text-decoration: none;
     &::after {
         content: "";
@@ -40,11 +43,11 @@ body {
         transform-origin: 50% 50%;
         width: 100%;
         height: 1px;
-        background-color: grey;
+        background-color: lightgray;
         transition: transform 250ms;
         }
         &:hover {
-            color: grey;
+            color: lightgray;
             font-weight: bold;
         }
         &:hover::after {

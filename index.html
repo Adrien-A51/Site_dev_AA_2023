@@ -8,6 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap" rel="stylesheet">
 
+    <!--font Work sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+
     <!--fontawesome-->
     <script src="https://kit.fontawesome.com/6d160e6da3.js" crossorigin="anonymous"></script>
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,14 +20,21 @@
 	  <!--styles.css-->
     <link rel="stylesheet" href="styles/styles.css" type="text/css">
 
-    <!-- 1. anim.scss -->
+    <!-- anim.scss -->
     <link rel="stylesheet" href="styles/anim/anim.css" type="text/css">
 
-    <!-- 2. header.scss -->
+    <!-- header.scss -->
     <link rel="stylesheet" href="styles/header/header.css" type="text/css">
 
-    <!-- . footer.scss -->
+    <!-- footer.scss -->
     <link rel="stylesheet" href="styles/footer/footer.css" type="text/css">
+
+    <!-- AOS scroll librairie -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+
 
     <!--script-->
     <script src="script.js" defer></script>
@@ -40,118 +52,263 @@
     -->
 
 <!-- btn scrollTop -->
-    <div id="stop" class="scrollTop"><span><a href=""><i class="fa-solid fa-chevron-up"></i></a></span></div>
+    <div id="stop" class="scrollTop">
+      <span><a href=""><i class="fa-solid fa-chevron-up"></i></a></span>
+    </div>
 
-<!-- btn scrollDown -->
+<!-- btn scrollDown1 -->
     <a class="arrow-wrap" href="#content">
       <i class="fa-solid fa-chevron-down fa-beat" style="--fa-animation-duration: 3s;"></i>
     </a>
-      
+
+<!-- btn scrollDown2 -->
+<a class="arrow-wrap2" href="#content2">
+  <i class="fa-solid fa-chevron-down fa-beat" style="--fa-animation-duration: 3s;"></i>
+</a>
+
+
 <!-- Header -->
 <div class="header">
-    <img href="index.html" src="images/header/logo-aa-infographiste.png" alt='Logo_AA'/>
+    <img href="index.html" style="opacity: 0;" src="images/header/logo-aa-infographiste.png" alt='Logo_AA'/>
     <nav>
-        <a href="#">Accueil</a>
-        <a href="#">Présentation</a>
-        <a href="#">Réalisations</a>
-        <a href="#">Contact</a>
+        <!--<a href="#present">Présentation</a>
+        <a href="#comp">Compétences</a>
+        -->
+        <a href="#content">Réalisations</a>
+        <a href="#container-contact">Contact</a>
     </nav>
 </div>
 
+<div id="large-header" class="large-header">
+  <canvas id="demo-canvas"></canvas>
+</div>
+<!--
+<div id="present">
+  <div class="p-gauche"></div>
+  <div class="p-droite"></div>
+</div>
+<div id="comp">
+  <div class="skills" data-aos="fade-right" data-aos-duration="2000">
+    <h2>Connaissance des logiciels</h2>
+    <div class="log">
+      <div class="loghov"></div>
+      Indesign</div>
+    <div class="log">Illustrator</div>
+    <div class="log">Photoshop</div>
+
+    <div class="log">Dreamweaver</div>
+    <div class="log">Visual Studio Code</div>
+    <div class="log">Github</div>
+
+    <div class="log">Word</div>
+    <div class="log">Excel</div>
+
+  </div>
+</div>
+-->
+<div class="content" id="content">
+
+  <div class="main2" id="main2">
+    
+    <div class="hero-left">
+      <div onclick="switchLayer1()" class="projet1">
+        <p>Logo</p>
+      </div>
+      <div onclick="switchLayer2()" class="projet1">
+        <p>Carte de visite</p>
+      </div>
+      <div class="projet1">
+        <p>Site web<br><br><br><br><br>Prochainement ...</p>
+      </div>
+    </div>
+
+    <!-- onclick="switchLayer3()" -->
 
 
-
-<div class="present"></div>
-
-  <div class="content" id="content">
-
-    <div class="main2">
-      <div class="hero-left">
-        <h1>Equip TP service</h1>
-        <div class="layers">
+    <div class="hero-right">
+      <div class="layer layer-displayed" data-scene="1"></div>
+      <div class="layer" data-scene="2"></div>
+      <div class="layer" data-scene="3"></div>
+      <div class="photo-frame">
+        <div class="layer layer-displayed" style="background-image: url(./images/projet/EQUIP_TP/1_mock_up_1.png)" data-scene="1"></div>
+        <div class="layer" style="background-image: url(./images/projet/EQUIP_TP/2_mock_up_1.png)" data-scene="2"></div>
+        <div class="layer" style="background-color: black; " data-scene="3"></div>
+        <div class="cover"></div>
+      </div>
+      <div class="photo-name">
+        <div class="photo-name__wrapper">
           <div class="layer layer-displayed" data-scene="1">
-            <span>Logo</span>
-            <div class="layer__image" style="background-image: url(./images/projet/1_logo_EQUIP_TP.png)"></div>
-            <div class="layer__info">
-              <div>
-                  <p>Adobe indesign</p>
-                  <p>Adobe illustrator</p>
-              </div>
-            </div>
+            <span class="photo-name__title">EQUIP TP service est une entreprise de vente,
+              de réparation et de location de matériel de travaux publics</span>
+            <span>Création d'un logo</span>
           </div>
           <div class="layer" data-scene="2">
-            <span>Carte de visite</span>
-            <div class="layer__image" style="background-image: url(./images/projet/2_cdv_Romain_A.png)"></div>
-            <div class="layer__info">
-              <div>
-                  <p>Adobe indesign</p>
-                  <p>Adobe illustrator</p>
-              </div>
-            </div>
+            <span class="photo-name__title">EQUIP TP service est une entreprise de vente,
+              de réparation et de location de matériel de travaux publics</span>
+            <span>Création de Cartes de visites</span>
           </div>
-          <div class="layer" data-scene="3">
-            <span>Site web à venir...</span>
-            <div class="layer__image" style="background-image: url('http://pngimg.com/uploads/snowboard/snowboard_PNG7998.png')"></div>
-            <div class="layer__info">
-              <div>
-                  <p>Visual Studio Code</p>
-                  <p>Github</p>
-              </div>
-            </div>
+          <div class="layer" data-scene="3 ">
+            <span class="photo-name__title">EQUIP TP service</span>
+            <span>Site web</span>
           </div>
-        </div>
-        <button onclick="switchLayer(2)"><</button>
-        <button onclick="switchLayer()">></button>
-      </div>
-  
-      
-      <div class="hero-right">
-        <div class="layer layer-displayed" data-scene="1"></div>
-        <div class="layer" data-scene="2"></div>
-        <div class="layer" data-scene="3"></div>
-        <div class="photo-frame">
-          <div class="layer layer-displayed" style="background-image: url(./images/projet/1_mock_up_1.png)" data-scene="1"></div>
-          <div class="layer" style="background-image: url(./images/projet/2_mock_up_1.png)" data-scene="2"></div>
-          <div class="layer" style="background-image: url('https://images.unsplash.com/photo-1512821062947-6eda5253c3e2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=305dedf0e09581de0ee68ab2c9523955&auto=format&fit=crop&w=1351&q=80')" data-scene="3"></div>
-          <div class="cover"></div>
-        </div>
-        <div class="photo-name">
-          <div class="photo-name__wrapper">
-            <div class="layer layer-displayed" data-scene="1">
-              <span class="photo-name__title">EQUIP TP service</span>
-              <span>Logo</span>
-            </div>
-            <div class="layer" data-scene="2">
-              <span class="photo-name__title">EQUIP TP service</span>
-              <span>Carte de visites</span>
-            </div>
-            <div class="layer" data-scene="3 ">
-              <span class="photo-name__title">EQUIP TP service</span>
-              <span>Site web</span>
-            </div>
-          </div>
-        </div>
-        <div class="photo-frame">
-          <div class="layer layer-displayed" style="background-image: url(./images/projet/1_mock_up_2.png)" data-scene="1"></div>
-          <div class="layer" style="background-image: url(./images/projet/2_mock_up_2.png)" data-scene="2"></div>
-          <div class="layer" style="background-image: url('https://images.unsplash.com/photo-1478700485868-972b69dc3fc4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=918195bdc5a37a2f412cf49234183427&auto=format&fit=crop&w=1350&q=80')" data-scene="3"></div>
-          <div class="cover"></div>
         </div>
       </div>
-  </div>
-  </div>
+      <div class="photo-frame">
+        <div class="layer layer-displayed" style="background-image: url(./images/projet/EQUIP_TP/1_mock_up_2.png)" data-scene="1"></div>
+        <div class="layer" style="background-image: url(./images/projet/EQUIP_TP/2_mock_up_2.png)" data-scene="2"></div>
+        <div class="layer" style="background-color: lightgray;" data-scene="3"></div>
+        <div class="cover"></div>
+      </div>
+    </div>
+</div><!-- #main2 -->
+</div>
 
-<!-- . Footer -->
+
+<div class="content" id="content2" style="border-top: solid 5px grey;">
+
+  <div class="main2" id="main2">
+
+
+    <div class="hero-left">
+      <div onclick="switchLayer1()" class="projet2">
+        <p>Site Web Booki</p>
+      </div>
+      <div onclick="switchLayer2()" class="projet2">
+        <p>Site Web Kanap</p>
+      </div>
+      <div onclick="switchLayer3()" class="projet2">
+        <p>API React Kasa</p>
+      </div>
+    </div>
+
+<!-- btn scrollDown2 -->
+<a class="arrow-wrap2" href="#content2">
+  <i class="fa-solid fa-chevron-down fa-beat" style="--fa-animation-duration: 3s;"></i>
+</a>
+
+
+    <div class="hero-right">
+
+      <div style="background-color: #0164FC;" class="layer layer-displayed" data-scene="1"></div>
+      <div style="background-color: #0B3B4D;" class="layer" data-scene="2"></div>
+      <div style="background-color: #FF6060;" class="layer" data-scene="3"></div>
+      <div class="photo-frame">
+
+
+    
+          <div class="layer layer-displayed" style="background-image: url(./images/projet/Openclassrooms/4_Booki_2.png); background-size: contain;" data-scene="1">
+            <div class="hov">
+              <a href="https://github.com/Adrien-A51/P2-Booki" target="_blank"><p><i class="fa-brands fa-github"></i> Github</p></a>
+            </div>
+          </div>
+
+        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/5_kanap_1.png); background-size: contain;" data-scene="2">
+          <div class="hov">
+            <a href="https://github.com/Adrien-A51/P5-Kanap" target="_blank"><p><i class="fa-brands fa-github"></i> Github</p></a>
+          </div>
+        </div>
+
+        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/6_kasa_1.png); background-size: contain;" data-scene="3">
+          <div class="hov">
+            <a href="https://github.com/Adrien-A51/P7-Kasa" target="_blank"><p><i class="fa-brands fa-github"></i> Github</p></a>
+          </div>
+        </div>
+          
+        <div class="cover" style="top: 50px;height: 62%;"></div>
+      </div>
+      <div class="photo-name">
+        <div class="photo-name__wrapper">
+          <div class="layer layer-displayed" data-scene="1">
+            <span class="photo-name__title" style="color: white;">Openclassrooms : Projet n°2</span>
+            <span style="color: white;">Transformez une maquette en site web avec HTML & CSS<br><br>
+              Site web Booki</span>
+          </div>
+          <div class="layer" data-scene="2">
+            <span class="photo-name__title" style="color: white;">Openclassrooms : Projet n°5</span>
+            <span style="color: white;">Construisez un site <br>e-commerce en JavaScript<br><br>
+              Site web Kanap</span>
+          </div>
+          <div class="layer" data-scene="3 ">
+            <span class="photo-name__title" style="color: white;">Openclassrooms : Projet n°7</span>
+            <span style="color: white;">Créez une application web de location immobilière avec React<br><br>
+              API React Kasa</span>
+          </div>
+        </div>
+      </div>
+      <div class="photo-frame">
+        <div class="layer layer-displayed" style="background-image: url(./images/projet/Openclassrooms/4_imgsite_Booki_1.png); background-size: contain; " data-scene="1"></div>
+        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/5_imgsite_Kanap_1.png); background-size: contain;" data-scene="2"></div>
+        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/6_imgsite_kasa_1.png); background-size: contain;" data-scene="3"></div>
+        <div class="cover" style="height: 90%;"></div>
+      </div>
+    </div>
+</div><!-- #main2 -->
+</div>
+
+<!-- contact -->
+
+
+
+
+
+<div id="container-contact">
+    <div class="contact" data-aos="fade-right">
+      <h3>Contact</h3>
+        <form method="get"  action="#">
+            <div class="form-nom-email">
+                <div class="form-column">
+                    <input type="text" name="nom" id="nom" placeholder="Nom" required>
+                </div>
+                <div class="form-column">
+                    <input type="text" name="phone" id="phone" placeholder="N° de Téléphone" >
+                </div>
+            </div>
+            <div class="form-column">
+              <input type="email" name="email" id="email" placeholder="Votre email" >
+          </div>
+          <div class="form-column">
+            <select name="part-pro" id="part-pro">
+              <option style="color: #909090;">Vous êtes :</option>
+              <option>Un particulier</option>
+              <option>Une entreprise</option>
+            </select>
+          </div>
+          <div class="form-column">
+            <select name="part-pro" id="part-pro2">
+              <option>Votre demande concerne :</option>
+              <option>Une préstation en inforgraphie</option>
+              <option>Une préstation en création Web</option>
+            </select>
+          </div>
+          <div class="form-column">
+            <input type="message" name="message" id="message" placeholder="Votre message" >
+        </div>
+            <input type="submit" value="ENVOYER" class="cta">
+        </form>
+
+        
+      <p> <i class="fa-solid fa-phone"></i> 06 19 55 57 22 &nbsp;
+        <i class="fa-solid fa-envelope"></i> aabdalalim5@gmail.com
+      </p>
+    </div>
+</div>
+
+
+<!-- Footer -->
 
 <div class='footer'>
     <p><img src="images/footer/logo-aa-infographiste2.png" alt='Logo_AA'/>
         Adrien Abdalalim - Développeur Web & React</p>
         <nav>
-            <a href="#">Accueil</a>
-            <a href="#">Réalisations</a>
-            <a href="#">Contact</a>
+            <!--<a href="#">Présentation</a>-->
+            <a href="#content">Réalisations</a>
+            <a href="#container-contact">Contact</a>
         </nav>
     </div>
 
 </body>
+
+<script>
+  AOS.init();
+</script>
 </html>

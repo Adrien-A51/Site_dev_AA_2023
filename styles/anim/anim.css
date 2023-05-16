@@ -46,26 +46,28 @@
   right: 1%;
   z-index: 1;
   bottom: 1%;
-  background-color: #d3d3d3;
-  border: solid 2px black;
-  border-radius: 7px;
-  padding: 15px;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px #333;
+  text-align: center;
+  font-size: 24px;
   transition: all 0.4s ease-in-out 0s;
 }
 .scrollTop:hover {
   transform: scale(0.9);
   color: #EC671B;
 }
-.scrollTop a {
-  font-size: 18px;
+.scrollTop i {
+  font-size: 24px;
   color: #2952A0;
 }
 
 .arrow-wrap {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   left: 50%;
-  bottom: 5px;
+  bottom: 10px;
   background: #2952A0;
   padding: 10px;
   border-radius: 5px;
@@ -74,7 +76,63 @@
 }
 .arrow-wrap i {
   font-size: 24px;
-  color: white;
+  color: #909090;
+}
+.arrow-wrap i:hover {
+  color: lightgray;
+}
+
+.arrow-wrap2 {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: -788px;
+  background: #2952A0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px #333;
+  text-align: center;
+}
+.arrow-wrap2 i {
+  font-size: 24px;
+  color: #909090;
+}
+.arrow-wrap2 i:hover {
+  color: lightgray;
+}
+
+/* anim fond */
+.large-header {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+}
+
+#large-header {
+  background-image: url("../../images/fond-present.png");
+}
+
+.main-title {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.demo-1 .main-title {
+  text-transform: uppercase;
+  font-size: 4.2em;
+  letter-spacing: 0.1em;
+}
+
+.main-title .thin {
+  font-weight: 200;
 }
 
 /*# sourceMappingURL=anim.css.map */
