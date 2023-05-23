@@ -16,7 +16,7 @@ body {
   .header {
     align-items: center;
     display: flex;
-    background-color: #2952A0;
+    //background-color: #2952A0;
     justify-content: space-between;
     width: 100%;
     font-family: "Work Sans";
@@ -32,7 +32,7 @@ body {
     position: relative;
     padding: 1rem 0 0.5rem;
     margin: 0 1.5rem;
-    color: #909090;
+    color: white;
     text-decoration: none;
     &::after {
         content: "";

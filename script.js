@@ -2,6 +2,10 @@
 let sliderIndex1 = 1;
 let sliderIndex2 = 2;
 let sliderIndex3 = 3;
+let sliderIndex4 = 4;
+let sliderIndex5 = 5;
+let sliderIndex6 = 6;
+
 
 let timeout;
 const layers = [...document.querySelectorAll('.layer')];
@@ -13,7 +17,7 @@ function changeCoverAnimState(state = 0) {
     cover.querySelector('.cover').style.width = `${state * 100}%`;
   });
 }
-
+// 1-Logo Equip TP
 function switchLayer1() {
   const nextSlide1 = (sliderIndex1);
   changeCoverAnimState(1);
@@ -34,7 +38,7 @@ function switchLayer1() {
   }
   sliderIndex1 = nextSlide1;
 }
-
+// 2-Cartedev Equip TP
 function switchLayer2() {
   const nextSlide2 = (sliderIndex2);
   changeCoverAnimState(1);
@@ -55,7 +59,7 @@ function switchLayer2() {
   }
   sliderIndex2 = nextSlide2;
 }
-
+// 3-Site Equip TP
 function switchLayer3() {
   const nextSlide3 = (sliderIndex3);
   changeCoverAnimState(1);
@@ -77,6 +81,71 @@ function switchLayer3() {
   sliderIndex3 = nextSlide3;
 }
 
+// 4-Site Booki
+function switchLayer4() {
+  const nextSlide4 = (sliderIndex4);
+  changeCoverAnimState(1);
+  clearTimeout(timeout);
+  timeout = setTimeout(() => {
+    changeCoverAnimState(0)
+  }, 500);
+  
+  for(let i of layers) {
+    i.classList.remove('layer-displayed');
+    i.classList.remove('layer-displayed-exit');
+    if(i.dataset.scene == nextSlide4) {
+      i.classList.add('layer-displayed');
+    }
+    if(i.dataset.scene == sliderIndex4) {
+      i.classList.add('layer-displayed-exit');
+    }
+  }
+  sliderIndex4 = nextSlide4;
+}
+
+// 5-Site Kanap
+function switchLayer5() {
+  const nextSlide5 = (sliderIndex5);
+  changeCoverAnimState(1);
+  clearTimeout(timeout);
+  timeout = setTimeout(() => {
+    changeCoverAnimState(0)
+  }, 500);
+  
+  for(let i of layers) {
+    i.classList.remove('layer-displayed');
+    i.classList.remove('layer-displayed-exit');
+    if(i.dataset.scene == nextSlide5) {
+      i.classList.add('layer-displayed');
+    }
+    if(i.dataset.scene == sliderIndex5) {
+      i.classList.add('layer-displayed-exit');
+    }
+  }
+  sliderIndex5 = nextSlide5;
+}
+
+// 6-Site Kasa
+function switchLayer6() {
+  const nextSlide6 = (sliderIndex6);
+  changeCoverAnimState(1);
+  clearTimeout(timeout);
+  timeout = setTimeout(() => {
+    changeCoverAnimState(0)
+  }, 500);
+  
+  for(let i of layers) {
+    i.classList.remove('layer-displayed');
+    i.classList.remove('layer-displayed-exit');
+    if(i.dataset.scene == nextSlide6) {
+      i.classList.add('layer-displayed');
+    }
+    if(i.dataset.scene == sliderIndex6) {
+      i.classList.add('layer-displayed-exit');
+    }
+  }
+  sliderIndex6 = nextSlide6;
+}
 
 
 $(window).scroll( function(){
@@ -174,7 +243,7 @@ $(document).ready(function() {
 
   });
 });
-
+/*
 // animation present
 (function() {
 
@@ -362,3 +431,4 @@ $(document).ready(function() {
   
 })();
 
+*/

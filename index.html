@@ -67,8 +67,11 @@
 </a>
 
 
-<!-- Header -->
-<div class="header">
+
+
+<div id="large-header" class="large-header">
+    <!-- Header -->
+  <div class="header">
     <img href="index.html" style="opacity: 0;" src="images/header/logo-aa-infographiste.png" alt='Logo_AA'/>
     <nav>
         <!--<a href="#present">Présentation</a>
@@ -77,10 +80,8 @@
         <a href="#content">Réalisations</a>
         <a href="#container-contact">Contact</a>
     </nav>
-</div>
-
-<div id="large-header" class="large-header">
-  <canvas id="demo-canvas"></canvas>
+  </div>
+  <!--<canvas id="demo-canvas"></canvas>-->
 </div>
 <!--
 <div id="present">
@@ -117,10 +118,20 @@
       <div onclick="switchLayer2()" class="projet1">
         <p>Carte de visite</p>
       </div>
-      <div class="projet1">
+      <div onclick="switchLayer3()" class="projet1">
         <p>Site web<br><br><br><br><br>Prochainement ...</p>
       </div>
+      <div onclick="switchLayer4()" class="projet1">
+        <p>Site Web Booki</p>
+      </div>
+      <div onclick="switchLayer5()" class="projet1">
+        <p>Site Web Kanap</p>
+      </div>
+      <div onclick="switchLayer6()" class="projet1">
+        <p>API React Kasa</p>
+      </div>
     </div>
+    
 
     <!-- onclick="switchLayer3()" -->
 
@@ -129,10 +140,29 @@
       <div class="layer layer-displayed" data-scene="1"></div>
       <div class="layer" data-scene="2"></div>
       <div class="layer" data-scene="3"></div>
+      <div class="layer" data-scene="4"></div>
+      <div class="layer" data-scene="5"></div>
+      <div class="layer" data-scene="6"></div>
+
       <div class="photo-frame">
         <div class="layer layer-displayed" style="background-image: url(./images/projet/EQUIP_TP/1_mock_up_1.png)" data-scene="1"></div>
         <div class="layer" style="background-image: url(./images/projet/EQUIP_TP/2_mock_up_1.png)" data-scene="2"></div>
         <div class="layer" style="background-color: black; " data-scene="3"></div>
+        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/4_Booki_2.png); background-size: contain; " data-scene="4">
+          <div class="hov">
+            <a href="https://github.com/Adrien-A51/P2-Booki" target="_blank"><p><i class="fa-brands fa-github"></i> Github</p></a>
+          </div>
+        </div>
+        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/5_kanap_1.png); background-size: contain; " data-scene="5">
+          <div class="hov">
+            <a href="https://github.com/Adrien-A51/P5-Kanap" target="_blank"><p><i class="fa-brands fa-github"></i> Github</p></a>
+          </div>
+        </div>
+        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/6_kasa_1.png);  background-size: contain; " data-scene="6">
+          <div class="hov">
+            <a href="https://github.com/Adrien-A51/P7-Kasa" target="_blank"><p><i class="fa-brands fa-github"></i> Github</p></a>
+          </div>
+        </div>
         <div class="cover"></div>
       </div>
       <div class="photo-name">
@@ -147,9 +177,21 @@
               de réparation et de location de matériel de travaux publics</span>
             <span>Création de Cartes de visites</span>
           </div>
-          <div class="layer" data-scene="3 ">
+          <div class="layer" data-scene="3">
             <span class="photo-name__title">EQUIP TP service</span>
             <span>Site web</span>
+          </div>
+          <div class="layer" data-scene="4">
+            <span class="photo-name__title">Openclassrooms : Projet n°2</span>
+            <span>Transformez une maquette en site web avec HTML & CSS</span>
+          </div>
+          <div class="layer" data-scene="5">
+            <span class="photo-name__title">Openclassrooms : Projet n°5</span>
+            <span>Construisez un site <br>E-commerce en JavaScript</span>
+          </div>
+          <div class="layer" data-scene="6">
+            <span class="photo-name__title">Openclassrooms : Projet n°7</span>
+            <span>Créez une application web de location immobilière avec React</span>
           </div>
         </div>
       </div>
@@ -157,6 +199,9 @@
         <div class="layer layer-displayed" style="background-image: url(./images/projet/EQUIP_TP/1_mock_up_2.png)" data-scene="1"></div>
         <div class="layer" style="background-image: url(./images/projet/EQUIP_TP/2_mock_up_2.png)" data-scene="2"></div>
         <div class="layer" style="background-color: lightgray;" data-scene="3"></div>
+        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/4_imgsite_Booki_1.png); background-size: contain; " data-scene="4"></div>
+        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/5_imgsite_Kanap_1.png); background-size: contain; " data-scene="5"></div>
+        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/6_imgsite_kasa_1.png); background-size: contain; " data-scene="6"></div>
         <div class="cover"></div>
       </div>
     </div>
@@ -164,93 +209,8 @@
 </div>
 
 
-<div class="content" id="content2" style="border-top: solid 5px grey;">
-
-  <div class="main2" id="main2">
-
-
-    <div class="hero-left">
-      <div onclick="switchLayer1()" class="projet2">
-        <p>Site Web Booki</p>
-      </div>
-      <div onclick="switchLayer2()" class="projet2">
-        <p>Site Web Kanap</p>
-      </div>
-      <div onclick="switchLayer3()" class="projet2">
-        <p>API React Kasa</p>
-      </div>
-    </div>
-
-<!-- btn scrollDown2 -->
-<a class="arrow-wrap2" href="#content2">
-  <i class="fa-solid fa-chevron-down fa-beat" style="--fa-animation-duration: 3s;"></i>
-</a>
-
-
-    <div class="hero-right">
-
-      <div style="background-color: #0164FC;" class="layer layer-displayed" data-scene="1"></div>
-      <div style="background-color: #0B3B4D;" class="layer" data-scene="2"></div>
-      <div style="background-color: #FF6060;" class="layer" data-scene="3"></div>
-      <div class="photo-frame">
-
-
-    
-          <div class="layer layer-displayed" style="background-image: url(./images/projet/Openclassrooms/4_Booki_2.png); background-size: contain;" data-scene="1">
-            <div class="hov">
-              <a href="https://github.com/Adrien-A51/P2-Booki" target="_blank"><p><i class="fa-brands fa-github"></i> Github</p></a>
-            </div>
-          </div>
-
-        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/5_kanap_1.png); background-size: contain;" data-scene="2">
-          <div class="hov">
-            <a href="https://github.com/Adrien-A51/P5-Kanap" target="_blank"><p><i class="fa-brands fa-github"></i> Github</p></a>
-          </div>
-        </div>
-
-        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/6_kasa_1.png); background-size: contain;" data-scene="3">
-          <div class="hov">
-            <a href="https://github.com/Adrien-A51/P7-Kasa" target="_blank"><p><i class="fa-brands fa-github"></i> Github</p></a>
-          </div>
-        </div>
-          
-        <div class="cover" style="top: 50px;height: 62%;"></div>
-      </div>
-      <div class="photo-name">
-        <div class="photo-name__wrapper">
-          <div class="layer layer-displayed" data-scene="1">
-            <span class="photo-name__title" style="color: white;">Openclassrooms : Projet n°2</span>
-            <span style="color: white;">Transformez une maquette en site web avec HTML & CSS<br><br>
-              Site web Booki</span>
-          </div>
-          <div class="layer" data-scene="2">
-            <span class="photo-name__title" style="color: white;">Openclassrooms : Projet n°5</span>
-            <span style="color: white;">Construisez un site <br>e-commerce en JavaScript<br><br>
-              Site web Kanap</span>
-          </div>
-          <div class="layer" data-scene="3 ">
-            <span class="photo-name__title" style="color: white;">Openclassrooms : Projet n°7</span>
-            <span style="color: white;">Créez une application web de location immobilière avec React<br><br>
-              API React Kasa</span>
-          </div>
-        </div>
-      </div>
-      <div class="photo-frame">
-        <div class="layer layer-displayed" style="background-image: url(./images/projet/Openclassrooms/4_imgsite_Booki_1.png); background-size: contain; " data-scene="1"></div>
-        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/5_imgsite_Kanap_1.png); background-size: contain;" data-scene="2"></div>
-        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/6_imgsite_kasa_1.png); background-size: contain;" data-scene="3"></div>
-        <div class="cover" style="height: 90%;"></div>
-      </div>
-    </div>
-</div><!-- #main2 -->
-</div>
 
 <!-- contact -->
-
-
-
-
-
 <div id="container-contact">
     <div class="contact" data-aos="fade-right">
       <h3>Contact</h3>
@@ -298,7 +258,7 @@
 
 <div class='footer'>
     <p><img src="images/footer/logo-aa-infographiste2.png" alt='Logo_AA'/>
-        Adrien Abdalalim - Développeur Web & React</p>
+        </p>
         <nav>
             <!--<a href="#">Présentation</a>-->
             <a href="#content">Réalisations</a>

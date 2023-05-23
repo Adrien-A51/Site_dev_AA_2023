@@ -71,7 +71,7 @@
   background-color: black;
   z-index: 5;
   opacity: 0;
-  margin-top: 58px;
+  margin-top: 49px;
   transition: all 0.5s;
 }
 .hov:hover {
@@ -116,11 +116,13 @@
 .main2 .hero-left {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: unset;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 .main2 .hero-left .projet1 {
-  width: 100%;
-  height: 33%;
+  width: 33%;
+  height: 25%;
   background-repeat: no-repeat;
   background-size: auto 70%;
   background-position: center center;
@@ -129,35 +131,55 @@
   border-bottom: solid 1px;
 }
 .main2 .hero-left .projet1 p {
-  text-align: left;
+  text-align: center;
   font-family: "Work sans";
-  font-size: 20px;
+  font-size: 17px;
   margin: 0;
   padding-top: 10px;
   height: 100%;
-  width: 140%;
+  width: 100%;
   transition: all 1s;
-  transform: translate(-160px);
+  opacity: 0;
 }
 .main2 .hero-left .projet1 p:hover {
   text-align: center;
-  transform: translate(-97px);
   transition: all 1s;
+  opacity: 1;
 }
 .main2 .hero-left .projet1:nth-child(1) {
   background-image: url(../images/projet/EQUIP_TP/1_logo_EQUIP_TP.png);
 }
 .main2 .hero-left .projet1:nth-child(1):hover {
-  box-shadow: 0 0 0 300px rgba(236, 103, 27, 0.8) inset;
+  box-shadow: 0 0 0 300px rgba(236, 103, 27, 0.3) inset;
 }
 .main2 .hero-left .projet1:nth-child(2) {
   background-image: url(../images/projet/EQUIP_TP/2_cdv_Romain_A.png);
 }
 .main2 .hero-left .projet1:nth-child(2):hover {
-  box-shadow: 0 0 0 300px rgba(174, 174, 173, 0.8) inset;
+  box-shadow: 0 0 0 300px rgba(174, 174, 173, 0.3) inset;
 }
 .main2 .hero-left .projet1:nth-child(3):hover {
-  box-shadow: 0 0 0 300px rgba(128, 128, 128, 0.8) inset;
+  box-shadow: 0 0 0 300px rgba(128, 128, 128, 0.3) inset;
+}
+.main2 .hero-left .projet1:nth-child(4) {
+  background-image: url(../images/projet/Openclassrooms/4_logo_Booki.png);
+  background-size: contain;
+}
+.main2 .hero-left .projet1:nth-child(4):hover {
+  box-shadow: 0 0 0 300px rgba(3, 99, 252, 0.3) inset;
+}
+.main2 .hero-left .projet1:nth-child(5) {
+  background-image: url(../images/projet/Openclassrooms/5_logo_kanap.png);
+}
+.main2 .hero-left .projet1:nth-child(5):hover {
+  box-shadow: 0 0 0 300px rgba(11, 59, 77, 0.3) inset;
+}
+.main2 .hero-left .projet1:nth-child(6) {
+  background-image: url(../images/projet/Openclassrooms/6_logo_kasa.svg);
+  background-size: cover;
+}
+.main2 .hero-left .projet1:nth-child(6):hover {
+  box-shadow: 0 0 0 300px rgba(255, 96, 96, 0.3) inset;
 }
 .main2 .hero-left .projet2 {
   width: 100%;
@@ -170,15 +192,14 @@
   border-bottom: solid 1px;
 }
 .main2 .hero-left .projet2 p {
-  text-align: left;
+  text-align: center;
   font-family: "Work sans";
-  font-size: 20px;
+  font-size: 17px;
   margin: 0;
   padding-top: 10px;
   height: 100%;
-  width: 140%;
+  width: 100%;
   transition: all 1s;
-  transform: translate(-160px);
 }
 .main2 .hero-left .projet2 p:hover {
   text-align: center;
@@ -366,15 +387,20 @@
   position: absolute;
   overflow: hidden;
   animation-play-state: paused;
+  width: 330px;
+  height: 260px;
+  top: 10%;
+  left: 15%;
+  z-index: 4;
 }
-.main2 .hero-right .photo-frame:nth-child(4) {
+.main2 .hero-right .photo-frame:first-child {
   top: 10%;
   left: 10%;
   width: 40%;
   height: 40%;
-  z-index: 3;
+  z-index: 1;
 }
-.main2 .hero-right .photo-frame:nth-child(4) .cover {
+.main2 .hero-right .photo-frame:first-child .cover {
   background-color: black;
 }
 .main2 .hero-right .photo-frame:last-child {
@@ -382,6 +408,7 @@
   left: 20%;
   width: 65%;
   height: 50%;
+  z-index: 3;
 }
 .main2 .hero-right .photo-frame .cover {
   position: absolute;

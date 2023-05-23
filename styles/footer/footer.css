@@ -1,12 +1,12 @@
 .footer {
   background-color: #2952A0;
-  height: 125px;
-  padding-top: 20px;
+  height: 90px;
+  padding-top: 10px;
   font-family: "Work Sans";
   font-size: 18px;
 }
 .footer img {
-  width: 80px;
+  width: 50px;
 }
 .footer p {
   color: white;
