@@ -13,6 +13,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;700&display=swap" rel="stylesheet">
 
+    <!--font Merriweather -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Work+Sans:wght@100;400;700&display=swap" rel="stylesheet">
+    
     <!--fontawesome-->
     <script src="https://kit.fontawesome.com/6d160e6da3.js" crossorigin="anonymous"></script>
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,8 +31,8 @@
     <!-- header.scss -->
     <link rel="stylesheet" href="styles/header/header.css" type="text/css">
 
-    <!-- footer.scss -->
-    <link rel="stylesheet" href="styles/footer/footer.css" type="text/css">
+    <!--contact.css-->
+    <link rel="stylesheet" href="/styles/contact/contact.css" type="text/css">
 
     <!-- AOS scroll librairie -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -42,11 +47,18 @@
     <!--jquery-->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
+    <!--fancybox-->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+
 	  <title>Accueil</title>
 </head>
 <body>
 
-<!-- loader -->
+
+
+
+    <!-- loader -->
     <!--
     <div class="chargement"><div class="loader"></div></div>
     -->
@@ -57,164 +69,144 @@
     </div>
 
 <!-- btn scrollDown1 -->
-    <a class="arrow-wrap" href="#content">
-      <i class="fa-solid fa-chevron-down fa-beat" style="--fa-animation-duration: 3s;"></i>
+    <a class="arrow-wrap" href="#container-services">
+      <i title="Services" class="fa-solid fa-chevron-down fa-beat" style="--fa-animation-duration: 3s;"></i>
     </a>
 
 <!-- btn scrollDown2 -->
-<a class="arrow-wrap2" href="#content2">
-  <i class="fa-solid fa-chevron-down fa-beat" style="--fa-animation-duration: 3s;"></i>
+<a class="arrow-wrap2" href="#container-projet">
+  <i title="Réalisations" class="fa-solid fa-chevron-down fa-beat" style="--fa-animation-duration: 3s;"></i>
 </a>
 
 
 
-
-<div id="large-header" class="large-header">
-    <!-- Header -->
-  <div class="header">
-    <img href="index.html" style="opacity: 0;" src="images/header/logo-aa-infographiste.png" alt='Logo_AA'/>
-    <nav>
-        <!--<a href="#present">Présentation</a>
-        <a href="#comp">Compétences</a>
-        -->
-        <a href="#content">Réalisations</a>
-        <a href="#container-contact">Contact</a>
-    </nav>
-  </div>
-  <!--<canvas id="demo-canvas"></canvas>-->
+<div class="header">
+  <!-- Header -->
+<div class="menu">
+  <nav>
+      <a href="#present">Qui suis-je</a>
+      <a href="#container-services">Services</a>
+      <!--<a href="#comp">Compétences</a>
+      -->
+      <a href="#container-projet">Réalisations</a>
+      <a href="#container-contact">Contact</a>
+  </nav>
 </div>
-<!--
-<div id="present">
-  <div class="p-gauche"></div>
-  <div class="p-droite"></div>
+
+<div class="logo"></div>
+
+
+<div class="logo-p-flex">
+  <!--data-aos="fade-right" data-aos-duration="2000"-->
+  <div class="logo-p">Développement Web<br>Infographie</div>
 </div>
-<div id="comp">
-  <div class="skills" data-aos="fade-right" data-aos-duration="2000">
-    <h2>Connaissance des logiciels</h2>
-    <div class="log">
-      <div class="loghov"></div>
-      Indesign</div>
-    <div class="log">Illustrator</div>
-    <div class="log">Photoshop</div>
 
-    <div class="log">Dreamweaver</div>
-    <div class="log">Visual Studio Code</div>
-    <div class="log">Github</div>
-
-    <div class="log">Word</div>
-    <div class="log">Excel</div>
-
-  </div>
 </div>
--->
-<div class="content" id="content">
 
-  <div class="main2" id="main2">
-    
-    <div class="hero-left">
-      <div onclick="switchLayer1()" class="projet1">
-        <p>Logo</p>
-      </div>
-      <div onclick="switchLayer2()" class="projet1">
-        <p>Carte de visite</p>
-      </div>
-      <div onclick="switchLayer3()" class="projet1">
-        <p>Site web<br><br><br><br><br>Prochainement ...</p>
-      </div>
-      <div onclick="switchLayer4()" class="projet1">
-        <p>Site Web Booki</p>
-      </div>
-      <div onclick="switchLayer5()" class="projet1">
-        <p>Site Web Kanap</p>
-      </div>
-      <div onclick="switchLayer6()" class="projet1">
-        <p>API React Kasa</p>
-      </div>
+<!-- Services -->
+<div id="container-services">
+
+  <!--data-aos="fade-right"-->
+
+  <!--data-aos="fade-right"-->
+    <div class="services">
+      <img src = "/images/logo siteweb.svg" alt="logo siteweb"/>
+      <h3>Site Web</h3>
+        <p>Un site internet complet</p>
     </div>
-    
 
-    <!-- onclick="switchLayer3()" -->
-
-
-    <div class="hero-right">
-      <div class="layer layer-displayed" data-scene="1"></div>
-      <div class="layer" data-scene="2"></div>
-      <div class="layer" data-scene="3"></div>
-      <div class="layer" data-scene="4"></div>
-      <div class="layer" data-scene="5"></div>
-      <div class="layer" data-scene="6"></div>
-
-      <div class="photo-frame">
-        <div class="layer layer-displayed" style="background-image: url(./images/projet/EQUIP_TP/1_mock_up_1.png)" data-scene="1"></div>
-        <div class="layer" style="background-image: url(./images/projet/EQUIP_TP/2_mock_up_1.png)" data-scene="2"></div>
-        <div class="layer" style="background-color: black; " data-scene="3"></div>
-        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/4_Booki_2.png); background-size: contain; " data-scene="4">
-          <div class="hov">
-            <a href="https://github.com/Adrien-A51/P2-Booki" target="_blank"><p><i class="fa-brands fa-github"></i> Github</p></a>
-          </div>
-        </div>
-        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/5_kanap_1.png); background-size: contain; " data-scene="5">
-          <div class="hov">
-            <a href="https://github.com/Adrien-A51/P5-Kanap" target="_blank"><p><i class="fa-brands fa-github"></i> Github</p></a>
-          </div>
-        </div>
-        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/6_kasa_1.png);  background-size: contain; " data-scene="6">
-          <div class="hov">
-            <a href="https://github.com/Adrien-A51/P7-Kasa" target="_blank"><p><i class="fa-brands fa-github"></i> Github</p></a>
-          </div>
-        </div>
-        <div class="cover"></div>
-      </div>
-      <div class="photo-name">
-        <div class="photo-name__wrapper">
-          <div class="layer layer-displayed" data-scene="1">
-            <span class="photo-name__title">EQUIP TP service est une entreprise de vente,
-              de réparation et de location de matériel de travaux publics</span>
-            <span>Création d'un logo</span>
-          </div>
-          <div class="layer" data-scene="2">
-            <span class="photo-name__title">EQUIP TP service est une entreprise de vente,
-              de réparation et de location de matériel de travaux publics</span>
-            <span>Création de Cartes de visites</span>
-          </div>
-          <div class="layer" data-scene="3">
-            <span class="photo-name__title">EQUIP TP service</span>
-            <span>Site web</span>
-          </div>
-          <div class="layer" data-scene="4">
-            <span class="photo-name__title">Openclassrooms : Projet n°2</span>
-            <span>Transformez une maquette en site web avec HTML & CSS</span>
-          </div>
-          <div class="layer" data-scene="5">
-            <span class="photo-name__title">Openclassrooms : Projet n°5</span>
-            <span>Construisez un site <br>E-commerce en JavaScript</span>
-          </div>
-          <div class="layer" data-scene="6">
-            <span class="photo-name__title">Openclassrooms : Projet n°7</span>
-            <span>Créez une application web de location immobilière avec React</span>
-          </div>
-        </div>
-      </div>
-      <div class="photo-frame">
-        <div class="layer layer-displayed" style="background-image: url(./images/projet/EQUIP_TP/1_mock_up_2.png)" data-scene="1"></div>
-        <div class="layer" style="background-image: url(./images/projet/EQUIP_TP/2_mock_up_2.png)" data-scene="2"></div>
-        <div class="layer" style="background-color: lightgray;" data-scene="3"></div>
-        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/4_imgsite_Booki_1.png); background-size: contain; " data-scene="4"></div>
-        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/5_imgsite_Kanap_1.png); background-size: contain; " data-scene="5"></div>
-        <div class="layer" style="background-image: url(./images/projet/Openclassrooms/6_imgsite_kasa_1.png); background-size: contain; " data-scene="6"></div>
-        <div class="cover"></div>
-      </div>
+    <div class="services">
+      <img src = "/images/logo APIweb.svg" alt="logo APIweb"/>
+      <h3>API Web</h3>
+        <p>Une application Web fonctionnelle</p>
     </div>
-</div><!-- #main2 -->
+
 </div>
+
+<!-- Services -->
+<div id="container-services">
+
+  <!--data-aos="fade-right"-->
+
+  <!--data-aos="fade-right"-->
+    <div class="services">
+      <img src = "/images/logo.svg" alt="logo siteweb"/>
+      <h3>Logo</h3>
+        <p>Un Logo</p>
+    </div>
+
+    <div class="services">
+      <img src = "/images/logo APIweb.svg" alt="logo APIweb"/>
+      <h3>Identité visuelle</h3>
+        <p>Une application Web fonctionnelle</p>
+    </div>
+
+    <div class="services">
+      <img src = "/images/logo APIweb.svg" alt="logo APIweb"/>
+      <h3>API Web</h3>
+        <p>Une application Web fonctionnelle</p>
+    </div>
+
+</div>
+
+
+<!-- Réalisations -->
+<div id="container-projet">
+    <div class="flex">
+
+      <div class="projet">
+        <div class="hov">
+          <h4>Logo</h4>
+          <p>EQUIP TP Service</p>
+        </div>
+      </div>
+      <div class="projet">
+        <div class="hov">
+          <h4>Carte de visite</h4>
+          <p>EQUIP TP Service</p>
+        </div>
+      </div>
+      <div class="projet">
+        <div class="hov">
+          <h4>Livret de Messe</h4>
+          <p>Mariage</p>
+        </div>
+      </div>
+      <div class="projet">
+        <div class="hov">
+          <h4>Flyer</h4>
+          <p>La Coutellerie Champenoise</p>
+        </div>
+      </div>
+
+
+
+    </div><!--flex-->
+    </div>
+
 
 
 
 <!-- contact -->
 <div id="container-contact">
-    <div class="contact" data-aos="fade-right">
-      <h3>Contact</h3>
-        <form method="get"  action="#">
+
+  <!--data-aos="fade-right"-->
+    <div class="contact" data-aos="zoom-in-right" data-aos-duration="2000">
+      <h3>Contact direct :</h3>
+
+        
+      <p> <i class="fa-solid fa-phone"></i> 06 19 55 57 22 &nbsp;<br><br>
+        <i class="fa-solid fa-envelope"></i> aabdalalim5@gmail.com<br><br>
+        <i class="fa-solid fa-house"></i> 19 Rue de l'Université, 51100 Reims
+        
+      </p>
+
+    </div>
+
+  <!--data-aos="fade-right"-->
+    <div class="contact" data-aos="zoom-in-left" data-aos-duration="2000">
+      <h3>Avec le formulaire de contact :</h3>
+        <form method="post"  action="form.php">
             <div class="form-nom-email">
                 <div class="form-column">
                     <input type="text" name="nom" id="nom" placeholder="Nom" required>
@@ -227,30 +219,36 @@
               <input type="email" name="email" id="email" placeholder="Votre email" >
           </div>
           <div class="form-column">
-            <select name="part-pro" id="part-pro">
+            <select name="partpro" id="partpro">
               <option style="color: #909090;">Vous êtes :</option>
               <option>Un particulier</option>
               <option>Une entreprise</option>
             </select>
           </div>
           <div class="form-column">
-            <select name="part-pro" id="part-pro2">
+            <select name="demande" id="demande">
               <option>Votre demande concerne :</option>
-              <option>Une préstation en inforgraphie</option>
-              <option>Une préstation en création Web</option>
+              <option>Une préstation en Conception Graphique</option>
+              <option>Une préstation en Création Web</option>
             </select>
           </div>
           <div class="form-column">
             <input type="message" name="message" id="message" placeholder="Votre message" >
         </div>
-            <input type="submit" value="ENVOYER" class="cta">
+            <button>
+              <div class="svg-wrapper-1">
+                <div class="svg-wrapper">
+                  <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
+                  </svg>
+                </div>
+              </div>
+              <span>Envoyer</span>
+            </button>
         </form>
-
-        
-      <p> <i class="fa-solid fa-phone"></i> 06 19 55 57 22 &nbsp;
-        <i class="fa-solid fa-envelope"></i> aabdalalim5@gmail.com
-      </p>
     </div>
+
 </div>
 
 
@@ -259,11 +257,6 @@
 <div class='footer'>
     <p><img src="images/footer/logo-aa-infographiste2.png" alt='Logo_AA'/>
         </p>
-        <nav>
-            <!--<a href="#">Présentation</a>-->
-            <a href="#content">Réalisations</a>
-            <a href="#container-contact">Contact</a>
-        </nav>
     </div>
 
 </body>

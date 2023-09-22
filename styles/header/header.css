@@ -8,33 +8,63 @@ body::-webkit-scrollbar-track {
   background: #909090; /* color of the tracking area */
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #2952A0; /* color of the scroll thumb */
+  background-color: white; /* color of the scroll thumb */
+  border-radius: 12px;
 }
 
-/* Header */
+/* anim fond */
 .header {
+  position: relative;
+  width: 100%;
+  height: 760px;
+  overflow: hidden;
+  background-color: #909090;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+}
+
+.main-title {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.demo-1 .main-title {
+  text-transform: uppercase;
+  font-size: 4.2em;
+  letter-spacing: 0.1em;
+}
+
+.main-title .thin {
+  font-weight: 200;
+}
+
+/* Menu */
+.menu {
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   font-family: "Work Sans";
   font-size: 18px;
+  padding-top: 22px;
 }
-.header img {
-  width: 200px;
-  padding-left: 25px;
-}
-.header nav {
+.menu nav {
   padding-right: 25px;
 }
-.header nav a {
+.menu nav a {
   position: relative;
   padding: 1rem 0 0.5rem;
   margin: 0 1.5rem;
   color: white;
   text-decoration: none;
 }
-.header nav a::after {
+.menu nav a::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -46,10 +76,44 @@ body::-webkit-scrollbar-thumb {
   background-color: lightgray;
   transition: transform 250ms;
 }
-.header nav a:hover {
+.menu nav a:hover {
   color: lightgray;
   font-weight: bold;
 }
-.header nav a:hover::after {
+.menu nav a:hover::after {
   transform: translateX(-50%) scaleX(1);
+}
+
+.logo {
+  background-image: url(../../images/header/Logo_AR.png);
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 300px;
+  background-size: contain;
+  margin: auto;
+  margin-top: 10%;
+  animation: fadeIn ease 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.logo-p-flex {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  gap: 25px;
+  font-family: "Rufina";
+  font-size: 50px;
+}
+.logo-p-flex .logo-p {
+  width: 100%;
+  height: 125px;
+  color: black;
+  text-align: center;
 }/*# sourceMappingURL=header.css.map */
