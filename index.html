@@ -1,267 +1,470 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
+
+    <!--font Raleway-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,600;0,900;1,100;1,300;1,400;1,600;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--font Abril fatface-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
 
     <!--font Rufina -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!--font Work sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!--font Merriweather -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Work+Sans:wght@100;400;700&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Work+Sans:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!--fontawesome-->
-    <script src="https://kit.fontawesome.com/6d160e6da3.js" crossorigin="anonymous"></script>
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	  <!--styles.css-->
-    <link rel="stylesheet" href="styles/styles.css" type="text/css">
+    <script
+      src="https://kit.fontawesome.com/6d160e6da3.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--styles.css-->
+    <link rel="stylesheet" href="styles/styles.css" type="text/css" />
 
     <!-- anim.scss -->
-    <link rel="stylesheet" href="styles/anim/anim.css" type="text/css">
+    <link rel="stylesheet" href="styles/anim/anim.css" type="text/css" />
 
     <!-- header.scss -->
-    <link rel="stylesheet" href="styles/header/header.css" type="text/css">
+    <link rel="stylesheet" href="styles/header/header.css" type="text/css" />
 
     <!--contact.css-->
-    <link rel="stylesheet" href="/styles/contact/contact.css" type="text/css">
+    <link rel="stylesheet" href="/styles/contact/contact.css" type="text/css" />
 
     <!-- AOS scroll librairie -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 
     <!--script-->
     <script src="script.js" defer></script>
 
     <!--jquery-->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
+    ></script>
 
-    <!--fancybox-->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
-
-	  <title>Accueil</title>
-</head>
-<body>
-
-
-
-
+    <title>Accueil</title>
+  </head>
+  <body>
     <!-- loader -->
     <!--
     <div class="chargement"><div class="loader"></div></div>
     -->
 
-<!-- btn scrollTop -->
+    <!-- btn scrollTop -->
     <div id="stop" class="scrollTop">
-      <span><a href=""><i class="fa-solid fa-chevron-up"></i></a></span>
+      <span
+        ><a href=""><i class="fa-solid fa-chevron-up"></i></a
+      ></span>
     </div>
 
-<!-- btn scrollDown1 -->
-    <a class="arrow-wrap" href="#container-services">
-      <i title="Services" class="fa-solid fa-chevron-down fa-beat" style="--fa-animation-duration: 3s;"></i>
+    <!-- btn scrollDown1 -->
+    <a class="arrow-wrap" href="#titre1">
+      <i
+        title="Services"
+        class="fa-solid fa-chevron-down fa-beat"
+        style="--fa-animation-duration: 3s"
+      ></i>
     </a>
 
-<!-- btn scrollDown2 -->
+    <!-- btn scrollDown2 
 <a class="arrow-wrap2" href="#container-projet">
   <i title="Réalisations" class="fa-solid fa-chevron-down fa-beat" style="--fa-animation-duration: 3s;"></i>
 </a>
+-->
 
-
-
-<div class="header">
-  <!-- Header -->
-<div class="menu">
-  <nav>
-      <a href="#present">Qui suis-je</a>
-      <a href="#container-services">Services</a>
-      <!--<a href="#comp">Compétences</a>
-      -->
-      <a href="#container-projet">Réalisations</a>
-      <a href="#container-contact">Contact</a>
-  </nav>
-</div>
-
-<div class="logo"></div>
-
-
-<div class="logo-p-flex">
-  <!--data-aos="fade-right" data-aos-duration="2000"-->
-  <div class="logo-p">Développement Web<br>Infographie</div>
-</div>
-
-</div>
-
-<!-- Services -->
-<div id="container-services">
-
-  <!--data-aos="fade-right"-->
-
-  <!--data-aos="fade-right"-->
-    <div class="services">
-      <img src = "/images/logo siteweb.svg" alt="logo siteweb"/>
-      <h3>Site Web</h3>
-        <p>Un site internet complet</p>
-    </div>
-
-    <div class="services">
-      <img src = "/images/logo APIweb.svg" alt="logo APIweb"/>
-      <h3>API Web</h3>
-        <p>Une application Web fonctionnelle</p>
-    </div>
-
-</div>
-
-<!-- Services -->
-<div id="container-services">
-
-  <!--data-aos="fade-right"-->
-
-  <!--data-aos="fade-right"-->
-    <div class="services">
-      <img src = "/images/logo.svg" alt="logo siteweb"/>
-      <h3>Logo</h3>
-        <p>Un Logo</p>
-    </div>
-
-    <div class="services">
-      <img src = "/images/logo APIweb.svg" alt="logo APIweb"/>
-      <h3>Identité visuelle</h3>
-        <p>Une application Web fonctionnelle</p>
-    </div>
-
-    <div class="services">
-      <img src = "/images/logo APIweb.svg" alt="logo APIweb"/>
-      <h3>API Web</h3>
-        <p>Une application Web fonctionnelle</p>
-    </div>
-
-</div>
-
-
-<!-- Réalisations -->
-<div id="container-projet">
-    <div class="flex">
-
-      <div class="projet">
-        <div class="hov">
-          <h4>Logo</h4>
-          <p>EQUIP TP Service</p>
-        </div>
-      </div>
-      <div class="projet">
-        <div class="hov">
-          <h4>Carte de visite</h4>
-          <p>EQUIP TP Service</p>
-        </div>
-      </div>
-      <div class="projet">
-        <div class="hov">
-          <h4>Livret de Messe</h4>
-          <p>Mariage</p>
-        </div>
-      </div>
-      <div class="projet">
-        <div class="hov">
-          <h4>Flyer</h4>
-          <p>La Coutellerie Champenoise</p>
-        </div>
+    <div class="header">
+      <div id="menu">
+        <nav>
+          <a href="#present">A propos</a>
+          <a href="#titre">Services</a>
+          <a href="#container-projet">Réalisations</a>
+          <a href="#container-contact">Contact</a>
+        </nav>
       </div>
 
+      <div class="container-logo"></div>
 
+      <div class="logo"></div>
 
-    </div><!--flex-->
+      <div class="logo-p-flex">
+        <!--data-aos="fade-right" data-aos-duration="2000"-->
+        <div class="logo-p">Développement Web<br />Création graphique</div>
+      </div>
     </div>
 
+    <!--<div class="fond-p"></div>-->
 
+    <!-- A propos 
+        <div id="container-present">
 
+          oo
+        </div>-->
 
-<!-- contact -->
-<div id="container-contact">
-
-  <!--data-aos="fade-right"-->
-    <div class="contact" data-aos="zoom-in-right" data-aos-duration="2000">
-      <h3>Contact direct :</h3>
-
-        
-      <p> <i class="fa-solid fa-phone"></i> 06 19 55 57 22 &nbsp;<br><br>
-        <i class="fa-solid fa-envelope"></i> aabdalalim5@gmail.com<br><br>
-        <i class="fa-solid fa-house"></i> 19 Rue de l'Université, 51100 Reims
-        
-      </p>
-
+    <div id="titre">
+      <h1>Services</h1>
     </div>
 
-  <!--data-aos="fade-right"-->
-    <div class="contact" data-aos="zoom-in-left" data-aos-duration="2000">
-      <h3>Avec le formulaire de contact :</h3>
-        <form method="post"  action="form.php">
-            <div class="form-nom-email">
-                <div class="form-column">
-                    <input type="text" name="nom" id="nom" placeholder="Nom" required>
-                </div>
-                <div class="form-column">
-                    <input type="text" name="phone" id="phone" placeholder="N° de Téléphone" >
-                </div>
+    <!-- Services -->
+    <div id="container-services">
+      <!--data-aos="fade-right"-->
+
+      <!--data-aos="fade-right"-->
+      <div data-aos="fade-right" class="services">
+        <!--<img
+          data-aos="fade-left"
+          src="/images/Fichier 2.svg"
+          alt="logo siteweb"
+        />-->
+        <h3><i class="fa-solid fa-house"></i> Site Vitrine</h3>
+        <p>Un site simple pour vous faire connaître :</p>
+        <p class="left">
+          <i class="fa-solid fa-check"></i> La personnalisation<br />
+          <i class="fa-solid fa-check"></i> Un formulaire de contact<br />
+          <i class="fa-solid fa-check"></i> Le référencement<br />
+          <i class="fa-solid fa-check"></i> Le nom de domaine du site<br />
+          <i class="fa-solid fa-check"></i> L'hébergement et la mise en ligne
+          <br />
+          <br /><br />
+        </p>
+        <div class="cont-img">
+          <img src="/images/logs/html-5.png" alt="logo-html" />
+          <img src="/images/logs/css-3.png" alt="logo-css" />
+          <img src="/images/logs/WordPress.png" alt="logo-Wp" />
+        </div>
+        <!--<div>Icônes conçues par <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/fr/" title="Flaticon">www.flaticon.com</a></div>-->
+        <p>à partir de</p>
+        <h3>1400 €</h3>
+        <a href="#container-contact">
+          <div class="button">
+            <p class="btnText">Demander un devis</p>
+            <div class="btnTwo">
+              <p class="btnText2"><i class="fa-solid fa-arrow-down"></i></p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div data-aos="fade-left" class="services">
+        <!--<img
+          data-aos="fade-left"
+          src="/images/Fichier 2.svg"
+          alt="logo siteweb"
+        />-->
+        <h3><i class="fa-solid fa-cart-shopping"></i> Site E-commerce</h3>
+        <p>Un site de vente en ligne pour vendre vos produits :</p>
+        <p class="left">
+          <i class="fa-solid fa-check"></i> La personnalisation<br />
+          <i class="fa-solid fa-check"></i> Un formulaire de contact<br />
+          <i class="fa-solid fa-check"></i> La création de compte utilisateur<br />
+          <i class="fa-solid fa-check"></i> Le paiement en ligne<br />
+          <i class="fa-solid fa-check"></i> Le référencement<br />
+          <i class="fa-solid fa-check"></i> Le nom de domaine du site<br />
+          <i class="fa-solid fa-check"></i> L'hébergement et la mise en ligne
+        </p>
+        <div class="cont-img">
+          <img src="/images/logs/html-5.png" alt="logo-html" />
+          <img src="/images/logs/css-3.png" alt="logo-css" />
+        </div>
+        <p>à partir de</p>
+        <h3>1800 €</h3>
+        <a href="#container-contact">
+          <div class="button">
+            <p class="btnText">Demander un devis</p>
+            <div class="btnTwo">
+              <p class="btnText2"><i class="fa-solid fa-arrow-down"></i></p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!--
+    <div class="services">
+      <!--<img
+        data-aos="fade-left"
+        src="/images/Fichier 2.svg"
+        alt="logo siteweb"
+      />-->
+      <!--
+      <h3><i class="fa-solid fa-robot"></i> Application Web</h3>
+      <p>Un site internet complet</p>
+    </div>
+  </div>
+-->
+
+      <!--data-aos="fade-right"-->
+
+      <!--data-aos="fade-right"-->
+      <div data-aos="fade-right" class="services">
+        <!--<img
+      data-aos="fade-left"
+      src="/images/Fichier 2.svg"
+      alt="logo siteweb"
+    />-->
+        <h3><i class="fa-solid fa-pen-nib"></i> Création de logo</h3>
+        <p>Un Logo pour faire connaître vôtre marque :</p>
+        <p class="left">
+          <i class="fa-solid fa-check"></i> La création<br />
+          <i class="fa-solid fa-check"></i> La personnalisation<br />
+          <i class="fa-solid fa-check"></i> Présentation de plusieurs
+          déclinaisons<br />
+          <i class="fa-solid fa-check"></i> Présentation sur plusieurs
+          supports<br />
+        </p>
+        <div class="cont-img">
+          <img src="/images/logs/illustrator.png" alt="logo-illustrator" />
+        </div>
+        <!--<div>Icônes conçues par <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/fr/" title="Flaticon">www.flaticon.com</a></div>-->
+        <p>à partir de</p>
+        <h3>250 €</h3>
+        <a href="#container-contact">
+          <div class="button">
+            <p class="btnText">Demander un devis</p>
+            <div class="btnTwo">
+              <p class="btnText2"><i class="fa-solid fa-arrow-down"></i></p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div data-aos="fade-left" class="services">
+        <!--<img
+      data-aos="fade-left"
+      src="/images/Fichier 2.svg"
+      alt="logo siteweb"
+    />-->
+        <h3><i class="fa-solid fa-file"></i> Supports de Communication</h3>
+        <p>Un support papier pour communiquer avec vos clients :</p>
+        <p class="left">
+          <i class="fa-solid fa-check"></i> Carte de visite<br />
+          <i class="fa-solid fa-check"></i> Flyer / affiche<br />
+        </p>
+        <div class="cont-img">
+          <img src="/images/logs/illustrator.png" alt="logo-illustrator" />
+          <img src="/images/logs/InDesign.png" alt="logo-Indesign" />
+        </div>
+        <p>à partir de</p>
+        <h3>500 €</h3>
+        <a href="#container-contact">
+          <div class="button">
+            <p class="btnText">Demander un devis</p>
+            <div class="btnTwo">
+              <p class="btnText2"><i class="fa-solid fa-arrow-down"></i></p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!--
+<div class="services">
+  <img
+    data-aos="fade-left"
+    src="/images/Fichier 2.svg"
+    alt="logo siteweb"
+  />-->
+      <!--
+  <h3><i class="fa-solid fa-robot"></i> Application Web</h3>
+  <p>Un site internet complet</p>
+</div>
+</div>
+-->
+    </div>
+    <!--container-services-->
+
+    <!-- Services -->
+
+    <!-- Réalisations -->
+
+    <div id="container-projet">
+      <figure>
+        <img src="/images/projet/EQUIP_TP/1_Logo_EQUIP_TP2.png" alt="" />
+        <figcaption>Logo<small>EQUIP TP SERVICE</small></figcaption>
+      </figure>
+
+      <figure>
+        <div class="hov">
+          <img src="/images/projet/EQUIP_TP/2_Cdv_EQUIP_TP1.png" alt="" />
+        </div>
+        <figcaption>Carte de visite<small>EQUIP TP SERVICE</small></figcaption>
+      </figure>
+      <figure>
+        <div class="hov">
+          <img src="/images/projet/EQUIP_TP/2_Cdv_EQUIP_TP1.png" alt="" />
+        </div>
+        <figcaption>Projet 3<small>EQUIP TP SERVICE</small></figcaption>
+      </figure>
+
+      <figure>
+        <div class="hov">
+          <img src="/images/projet/MariageMetC/livret_messe2.png" alt="" />
+        </div>
+        <figcaption>Livret de messe<small>Mariage</small></figcaption>
+      </figure>
+    </div>
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      style="display: none"
+    >
+      <symbol id="close" viewBox="0 0 18 18">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          fill="#FFFFFF"
+          d="M9,0.493C4.302,0.493,0.493,4.302,0.493,9S4.302,17.507,9,17.507
+          S17.507,13.698,17.507,9S13.698,0.493,9,0.493z M12.491,11.491c0.292,0.296,0.292,0.773,0,1.068c-0.293,0.295-0.767,0.295-1.059,0
+          l-2.435-2.457L6.564,12.56c-0.292,0.295-0.766,0.295-1.058,0c-0.292-0.295-0.292-0.772,0-1.068L7.94,9.035L5.435,6.507
+          c-0.292-0.295-0.292-0.773,0-1.068c0.293-0.295,0.766-0.295,1.059,0l2.504,2.528l2.505-2.528c0.292-0.295,0.767-0.295,1.059,0
+          s0.292,0.773,0,1.068l-2.505,2.528L12.491,11.491z"
+        />
+      </symbol>
+    </svg>
+
+    <!--
+    <br>
+    <div class="slide-dot">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  -->
+
+    <!-- contact -->
+    <div id="container-contact">
+      <!--data-aos="fade-right"-->
+      <div class="contact" data-aos="zoom-in-right" data-aos-duration="2000">
+        <h3>Contact direct :</h3>
+
+        <p>
+          <i class="fa-solid fa-phone"></i> 06 19 55 57 22 &nbsp;<br /><br />
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:aabdalalim5@gmail.com" style="color: white"
+            >aabdalalim5@gmail.com</a
+          ><br /><br />
+          <i class="fa-brands fa-facebook"></i>&nbsp; AR_Web<br /><br />
+          <i class="fa-brands fa-instagram"></i>&nbsp; @AR_Web
+        </p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2604.2645906569637!2d4.034630776431148!3d49.25243067138844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e9744d72a78991%3A0x86dc502856822ee2!2s19%20Rue%20de%20l&#39;Universit%C3%A9%2C%2051100%20Reims!5e0!3m2!1sfr!2sfr!4v1700061695948!5m2!1sfr!2sfr"
+        ></iframe>
+      </div>
+
+      <!--data-aos="fade-right"-->
+      <div class="contact" data-aos="zoom-in-left" data-aos-duration="2000">
+        <h3>Avec le formulaire de contact :</h3>
+        <form method="post" action="post_contact.php">
+          <div class="form-nom-email">
+            <div class="form-column">
+              <input
+                type="text"
+                name="nom"
+                id="nom"
+                placeholder="Nom"
+                required
+              />
             </div>
             <div class="form-column">
-              <input type="email" name="email" id="email" placeholder="Votre email" >
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="N° de Téléphone"
+              />
+            </div>
           </div>
           <div class="form-column">
-            <select name="partpro" id="partpro">
-              <option style="color: #909090;">Vous êtes :</option>
-              <option>Un particulier</option>
-              <option>Une entreprise</option>
-            </select>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Votre email"
+            />
           </div>
           <div class="form-column">
             <select name="demande" id="demande">
               <option>Votre demande concerne :</option>
-              <option>Une préstation en Conception Graphique</option>
-              <option>Une préstation en Création Web</option>
+              <option>Un site vitrine</option>
+              <option>Un site E-commerce</option>
+              <option>Un Logo</option>
+              <option>Un support de communication</option>
             </select>
           </div>
           <div class="form-column">
-            <input type="message" name="message" id="message" placeholder="Votre message" >
-        </div>
-            <button>
-              <div class="svg-wrapper-1">
-                <div class="svg-wrapper">
-                  <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
-                  </svg>
-                </div>
+            <textarea
+              type="message"
+              name="message"
+              id="message"
+              placeholder="Votre message"
+            ></textarea>
+          </div>
+          <input type="hidden" name="_captcha" value="false" />
+          <!--<input type="hidden" name="_next" value="">-->
+          <button>
+            <div class="svg-wrapper-1">
+              <div class="svg-wrapper">
+                <svg
+                  height="24"
+                  width="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
               </div>
-              <span>Envoyer</span>
-            </button>
+            </div>
+            <span>Envoyer</span>
+          </button>
         </form>
+      </div>
     </div>
 
-</div>
+    <!-- Footer -->
 
-
-<!-- Footer -->
-
-<div class='footer'>
-    <p><img src="images/footer/logo-aa-infographiste2.png" alt='Logo_AA'/>
-        </p>
+    <div class="footer">
+      <p><img src="/images/footer/logo-ar.png" alt="Logo_AR" /></p>
     </div>
+  </body>
 
-</body>
-
-<script>
-  AOS.init();
-</script>
+  <script>
+    AOS.init()
+  </script>
 </html>

@@ -17,17 +17,13 @@
   font-weight: 300;
   font-size: 18px;
   text-align: center;
-  margin-top: 30%;
 }
 #container-contact .contact {
   padding: 25px;
-  width: 600px;
+  width: 50%;
   height: 550px;
   background-color: #2952A0;
   color: white;
-}
-#container-contact .contact:nth-child(1) {
-  border-right: solid 2px #909090;
 }
 
 form {
@@ -36,14 +32,6 @@ form {
   margin: auto;
   color: white;
   margin-bottom: 30px;
-}
-form #partpro {
-  background-color: #2952A0;
-  color: white;
-  border: none;
-  border-bottom: solid 2px #909090;
-  font-size: 17px;
-  padding: 15px;
 }
 form #demande {
   background-color: #2952A0;
@@ -67,7 +55,6 @@ form .form-column {
 form input,
 form textarea {
   padding: 15px;
-  height: 20px;
   border-radius: 3px;
   border: none;
   background-color: #2952A0;
@@ -101,7 +88,7 @@ form input[type=submit]:hover {
 button {
   font-family: inherit;
   font-size: 20px;
-  background: #909090;
+  background: grey;
   width: 145px;
   margin: auto;
   color: white;
@@ -148,7 +135,7 @@ button:hover span {
   }
 }
 .footer {
-  background-color: #D3D3D3;
+  background-color: #2952A0;
   height: 60px;
   padding-top: 10px;
   font-family: "Work Sans";
@@ -244,4 +231,11 @@ button:hover span {
     border-right: none;
   }
 }
+iframe {
+  width: 660px;
+  height: 300px;
+  margin-top: 15px;
+  border-radius: 25px;
+}
+
 /*# sourceMappingURL=contact.css.map */
